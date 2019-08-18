@@ -1,0 +1,15 @@
+<experiment>
+
+	<sync-test name="random uniform 0.6 ADCOP SIO/PIO/DIO"  seed="1" repeat-count="50" run-var="p2" start="0.6" end="0.6" tick-size="0.1">
+	 	     	<algorithm name="MaxSumAD" instance-name="AD1 SIO"> <assign var="asymmetric" val="true"/> </algorithm> 
+	 	        <algorithm name="MaxSumAD" instance-name="AD2 PIO"> <assign var="asymmetric" val="true"/> <assign var="innerOrder" val="PIO"/> </algorithm>
+	 	        <algorithm name="MaxSumAD" instance-name="AD3 DIO"> <assign var="asymmetric" val="true"/> <assign var="innerOrder" val="DIO"/> </algorithm>
+	 	     	<algorithm name="MaxSumADVP" instance-name="ADVP1 SIO"> <assign var="asymmetric" val="true"/> </algorithm> 
+	 	        <algorithm name="MaxSumADVP" instance-name="ADVP2 PIO"> <assign var="asymmetric" val="true"/> <assign var="innerOrder" val="PIO"/> </algorithm>
+	 	        <algorithm name="MaxSumADVP" instance-name="ADVP3 DIO"> <assign var="asymmetric" val="true"/> <assign var="innerOrder" val="DIO"/> </algorithm>
+			<adcop-connected-noise n="50" d="10" max-cost="10" p1="0.6"/>
+	        <sqpt-sc/>
+	        <asqpt-sc/>
+	</sync-test>
+		
+</experiment>

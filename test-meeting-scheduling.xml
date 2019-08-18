@@ -1,0 +1,44 @@
+<experiment>	
+								
+	<sync-test name="meeting-scheduling DCOP" seed="1" repeat-count="50" run-var="p2" start="0.7" end="0.7" tick-size="0.1">								
+									
+			        <algorithm name="MaxSum"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="DSA-C" instance-name="DSA DCOP"> <assign var="asymmetric" val="false"/></algorithm> 						
+			        <algorithm name="MCSMGM_New" instance-name="MCS_MGM DCOP"> </algorithm>						
+			        <algorithm name="GCA_MGM" instance-name="GCA_MGM DCOP"> </algorithm>						
+			        <algorithm name="MaxSum" instance-name="Damped MaxSum 0.9 DCOP"> <assign var="asymmetric" val="false"/><assign var="dampingFactorVar" val="0.9"/> </algorithm>						
+	        		<algorithm name="BoundedMaxSum" instance-name="BoundedMaxSum"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="MaxSumAD" instance-name="MaxSumAD"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="MaxSumADVP" instance-name="MaxSumADVP"> <assign var="asymmetric" val="false"/></algorithm>	
+			        
+		<dcop-meeting-scheduling-noise n="50" m="20" t="20" conflict-cost-type="SUM_CONFLICT" part-gen-type="LOAD" 			
+		min-travel-time="6" travel-time-range="5" 			
+		min-duration="1" duration-range="1" min-time-cost="1" time-cost-range="5" 			
+		min-load="2" load-range="1"/>			
+		<sqpt-sc/>							
+	    <asqpt-sc/>	  							
+	</sync-test>								
+									
+								
+	<sync-test name="meeting-scheduling ADCOP" seed="1" repeat-count="50" run-var="p2" start="0.7" end="0.7" tick-size="0.1">								
+									
+			        <algorithm name="MaxSum"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="DSA-C" instance-name="DSA ADCOP"> <assign var="asymmetric" val="true"/></algorithm> 						
+			        <algorithm name="MCSMGM_New" instance-name="MCS_MGM ADCOP"> </algorithm>						
+			        <algorithm name="GCA_MGM" instance-name="GCA_MGM ADCOP"> </algorithm>						
+			        <algorithm name="MaxSum" instance-name="Damped MaxSum 0.9 ADCOP"> <assign var="asymmetric" val="true"/><assign var="dampingFactorVar" val="0.9"/> </algorithm>						
+	        		<algorithm name="BoundedMaxSum" instance-name="BoundedMaxSum"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="MaxSumAD" instance-name="MaxSumAD"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="MaxSumADVP" instance-name="MaxSumADVP"> <assign var="asymmetric" val="true"/></algorithm>	
+			        						
+		<adcop-meeting-scheduling-noise n="50" m="20" t="20" conflict-cost-type="SUM_CONFLICT" part-gen-type="LOAD" 			
+		min-travel-time="6" travel-time-range="5" 			
+		min-duration="1" duration-range="1" min-time-cost="1" time-cost-range="5" 			
+		min-load="2" load-range="1"/>			
+		<sqpt-sc/>							
+	    <asqpt-sc/>	  							
+	</sync-test>								
+									
+</experiment>									
+		
+			

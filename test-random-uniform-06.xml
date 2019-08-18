@@ -1,0 +1,40 @@
+<experiment>	
+								
+	<sync-test name="random uniform 0.6 DCOP" seed="1" repeat-count="50" run-var="p2" start="0.6" end="0.6" tick-size="0.1">								
+									
+			        <algorithm name="MaxSum"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="DSA-C" instance-name="DSA DCOP"> <assign var="asymmetric" val="false"/></algorithm> 						
+			        <algorithm name="MCSMGM_New" instance-name="MCS_MGM DCOP"> </algorithm>						
+			        <algorithm name="GCA_MGM" instance-name="GCA_MGM DCOP"> </algorithm>						
+			        <algorithm name="MaxSum" instance-name="Damped MaxSum 0.9 DCOP"> <assign var="asymmetric" val="false"/><assign var="dampingFactorVar" val="0.9"/> </algorithm>						
+	        		<algorithm name="BoundedMaxSum" instance-name="BoundedMaxSum"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="MaxSumAD" instance-name="MaxSumAD"> <assign var="asymmetric" val="false"/></algorithm>						
+			        <algorithm name="MaxSumADVP" instance-name="MaxSumADVP"> <assign var="asymmetric" val="false"/></algorithm>	
+			        
+		<dcop-connected-noise n="50" d="10" max-cost="10" p1="0.6"/>
+
+		<sqpt-sc/>							
+	    <asqpt-sc/>	  							
+	</sync-test>								
+									
+								
+	<sync-test name="random uniform 0.6 ADCOP" seed="1" repeat-count="50" run-var="p2" start="0.6" end="0.6" tick-size="0.1">								
+									
+			        <algorithm name="MaxSum"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="DSA-C" instance-name="DSA ADCOP"> <assign var="asymmetric" val="true"/></algorithm> 						
+			        <algorithm name="MCSMGM_New" instance-name="MCS_MGM ADCOP"> </algorithm>						
+			        <algorithm name="GCA_MGM" instance-name="GCA_MGM ADCOP"> </algorithm>						
+			        <algorithm name="MaxSum" instance-name="Damped MaxSum 0.9 ADCOP"> <assign var="asymmetric" val="true"/><assign var="dampingFactorVar" val="0.9"/> </algorithm>						
+	        		<algorithm name="BoundedMaxSum" instance-name="BoundedMaxSum"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="MaxSumAD" instance-name="MaxSumAD"> <assign var="asymmetric" val="true"/></algorithm>						
+			        <algorithm name="MaxSumADVP" instance-name="MaxSumADVP"> <assign var="asymmetric" val="true"/></algorithm>	
+			        						
+		<adcop-connected-noise n="50" d="10" max-cost="10" p1="0.6"/>
+	
+		<sqpt-sc/>							
+	    <asqpt-sc/>	  							
+	</sync-test>								
+									
+</experiment>									
+		
+			
